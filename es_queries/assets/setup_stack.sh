@@ -31,7 +31,7 @@ echo -e "Downloading dataset..."
 curl -Of --progress-bar https://gist.githubusercontent.com/pmusa/0413597eba8bed20bd085c579315bbe0/raw/cd944309d2d5974479713deab4ae928cbca317b1/recipes.bulk
 
 echo -e "Loading dataset..."
-curl -XPUT "http://localhost:9200/recipes/_bulk" -H "Content-Type: application/x-ndjson" --data-binary @recipes.bulk > /dev/null
+curl -XPUT "http://localhost:9200/recipes/_bulk?refresh=true" -H "Content-Type: application/x-ndjson" --data-binary @recipes.bulk > /dev/null
 
 NUMBER_OF_DOCS=39774
 RESPONSE=`curl -qs "localhost:9200/_cat/count/recipes?h=count"`
