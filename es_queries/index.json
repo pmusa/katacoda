@@ -28,7 +28,7 @@
       "host01": [
         {
           "file": "recipes.bulk",
-          "target": "/home/packer"
+          "target": "/home/packer/"
         }
       ]
     }
