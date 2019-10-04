@@ -28,7 +28,8 @@
       "host01": [
         {
           "file": "setup_stack.sh",
-          "target": "/root"
+          "target": "/root",
+          "chmod": "+x"}
         }
       ]
     }
