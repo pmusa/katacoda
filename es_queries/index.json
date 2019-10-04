@@ -29,7 +29,7 @@
         {
           "file": "setup_stack.sh",
           "target": "/root",
-          "chmod": "+x"}
+          "chmod": "+x"
         }
       ]
     }
