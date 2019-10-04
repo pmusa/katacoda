@@ -23,13 +23,21 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "recipes.bulk",
+          "target": "/home/packers"
+        }
+      ]
     }
   },
   "environment": {
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "docker",
+    "imageid": "ubuntu",
     "port": "5601"
   }
 }
