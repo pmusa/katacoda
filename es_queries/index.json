@@ -29,7 +29,7 @@
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "elasticsearch",
+    "imageid": "docker",
     "port": "5601"
   }
 }
