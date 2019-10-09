@@ -43,7 +43,7 @@ message: "Environment successfully loaded".
 Now that Elasticsearch and Kibana are running, you can click on the Dashboard
 tab to open Kibana.
 Kibana will ask you two questions. You should click "No" to the first one and
-"explore on my own" to the second one.
+"Explore on my own" to the second one.
 Finally, on the left-side menu, click on "Dev Tools" (the wrench icon).
 
 Congratulations, you are ready to start exploring queries.
