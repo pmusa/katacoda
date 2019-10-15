@@ -1,2 +1,1 @@
-# assignment
-Private repository created to implement an assignment using katacoda
+This is a public repository created to try katacoda out.
