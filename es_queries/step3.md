@@ -4,14 +4,7 @@ The request should match 18232 recipes.
 
 ```
 GET recipes/_search
-{
-  "track_total_hits": true,
-  "query": {
-    "match": {
-      "ingredients": "garlic"
-    }
-  }
-}
+{  "track_total_hits": true,  "query": {    "match": {      "ingredients": "garlic"    }  }}
 ```{{copy}}
 
 Update the query above to match `Garlic` instead of `garlic`.
