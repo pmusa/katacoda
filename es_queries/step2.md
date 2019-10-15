@@ -1,7 +1,7 @@
-Start by running the `match_all` query by either clicking the green play button
+First, execute the `match_all` query by either clicking the green play button
 or pressing `ctrl+enter` (`cmd+enter` in Macs).
-You should get back 10 documents from multiple indices from more than 10,000
-documents that were a hit.
+You should get back 10 documents out of more than 10,000 that were a hit from
+multiple indices.
 
 Next, update the search request to query only the `recipes` index.
 
@@ -31,6 +31,7 @@ When you set `track_total_hits` to `true`, you force Elasticsearch to count
 every hit and therefore avoid optimizations.
 This is great for exploring datasets, learning about Elasticsearch and some
 search use cases.
+However, it is not so great when speed is your main concern.
 
 
 Next, imagine that instead of 10 you only want to show 5 recipes per page.

@@ -1,5 +1,5 @@
 {
-  "title": "Elasticsearch Queries in 15 minutes",
+  "title": "Elasticsearch Queries in 15 Minutes",
   "description": "This is a 15 minute course about Elasticsearch Queries.",
   "difficulty": "Beginner",
   "time": "15 minutes",
@@ -10,16 +10,12 @@
         "text": "step1.md"
       },
       {
-        "title": "Introduction to Query DSL",
+        "title": "Introduction to the Elasticsearch Query DSL",
         "text": "step2.md"
       },
       {
         "title": "Match and Boolean Queries",
         "text": "step3.md"
-      },
-      {
-        "title": "Next Steps",
-        "text": "step4.md"
       }
     ],
     "intro": {

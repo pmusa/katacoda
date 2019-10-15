@@ -1,7 +1,6 @@
-In this lesson you will setup Elasticsearch and Kibana and load some
-documents.
+In this lesson you will setup Elasticsearch and Kibana and load some documents.
 
-To get stack started you only need to run the following script.
+To get the stack started, you only need to run the following script:
 `./setup_stack.sh`{{execute}}
 
 The script will:
@@ -38,12 +37,13 @@ Each recipe has an `id` (number), a `cuisine` (string), and the `ingredients`
 }
 ```
 
-After 2 minutes the script should be over and you should see the following
+After 2 minutes the script should finish and you should see the following
 message: "Environment successfully loaded".
-Now that Elasticsearch and Kibana are running, you can click on the Dashboard
+Now that Elasticsearch and Kibana are running, you can click on the "Dashboard"
 tab to open Kibana.
-Kibana will ask you two questions. You should click "No" to the first one and
-"Explore on my own" to the second one.
+Kibana will ask you two questions. You should answer "No" to the first question
+and "Explore on my own" to the second one.
 Finally, on the left-side menu, click on "Dev Tools" (the wrench icon).
 
 Congratulations, you are ready to start exploring queries.
+Go back to your class page to learn about the Elasticsearch Query DSL.
