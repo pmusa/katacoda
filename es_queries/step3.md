@@ -1,5 +1,8 @@
+Start by writing a search request that finds all recipes that contain `garlic`.
+Use the `track_total_hits` parameter to check the total number of hits.
+The request should match 18232 recipes.
+
 ```
-# i love garlic - 18232
 GET recipes/_search
 {
   "track_total_hits": true,
@@ -11,8 +14,10 @@ GET recipes/_search
 }
 ```{{copy}}
 
+Update the query above to match `Garlic` instead of `garlic`.
+The request should match the same 18232 recipes, as this query is case
+insensitive.
 ```
-# what about Garlic - 18232
 GET recipes/_search
 {
   "track_total_hits": true,
@@ -24,8 +29,9 @@ GET recipes/_search
 }
 ```{{copy}}
 
+Update the match clause to find recipes that contain `garlic` or `tomatoes`.
+The request should match 21007 recipes.
 ```
-# i also love tomatoes - 21007
 GET recipes/_search
 {
   "track_total_hits": true,
@@ -37,8 +43,9 @@ GET recipes/_search
 }
 ```{{copy}}
 
+Now, change the logic to an "and".
+Do you expect more or less documents?
 ```
-# but I actually want both, not one or the other - 5529
 GET recipes/_search
 {
   "query": {
@@ -51,9 +58,12 @@ GET recipes/_search
   }
 }
 ```{{copy}}
+The request should match less documents, more precisely 5529 recipes.
 
+
+Next, update the query to only return the recipes from the greek cuisine.
+The request should match 245 recipes.
 ```
-# now, if you want garlic tomatoes but greek cuisine - 245
 GET recipes/_search
 {
   "query": {
@@ -78,8 +88,9 @@ GET recipes/_search
 }
 ```{{copy}}
 
+Now, update the query to not return the recipes that contain `feta` cheese.
+The request should match 103 recipes.
 ```
-# now, if you want garlic tomatoes but greek cuisine. But I dont like feta - 103
 GET recipes/_search
 {
   "query": {
@@ -103,46 +114,6 @@ GET recipes/_search
         {
           "match": {
             "ingredients": "feta"
-          }
-        }
-      ]
-    }
-  }
-}
-```{{copy}}
-
-```
-# now, if you want garlic tomatoes but greek cuisine. But I dont like feta -103
-GET recipes/_search
-{
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "ingredients": {
-              "query": "garlic tomatoes",
-              "operator": "and"
-            }
-          }
-        },
-        {
-          "match": {
-            "cuisine": "greek"
-          }
-        }
-      ],
-      "must_not": [
-        {
-          "match": {
-            "ingredients": "feta"
-          }
-        }
-      ],
-      "should": [
-        {
-          "match": {
-            "ingredients": "cucumber"
           }
         }
       ]
